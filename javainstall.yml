@@ -1,0 +1,7 @@
+- name: Install openjdk java
+  hosts: all
+
+  roles:
+    - role: lean_delivery.java
+      transport: repositories
+      java_major_version: 8

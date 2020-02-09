@@ -1,3 +1,13 @@
 # from galaxy
 - src: yatesr.timezone
 
+#https://galaxy.ansible.com/geerlingguy/java
+- src: lean_delivery.java
+
+#https://galaxy.ansible.com/gantsign/maven
+- src: gantsign.maven
+
+#https://galaxy.ansible.com/sgwilbur/ibm-installation-manager
+#https://github.com/sgwilbur/ansible-ibm-installation-manager
+- src: sgwilbur.ibm-installation-manager
+
