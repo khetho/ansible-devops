@@ -1,8 +1,10 @@
 -  name: Checkout and build application
    hosts: all
    
+
    tasks:
    - name: Checkout source code
+     debug: var=ansible_facts
      git:
         repo: '{{gitscheme}}://{{gituser}}:{{gitpass}}@{{giturl}}'
         dest: "{{ destdir }}"
