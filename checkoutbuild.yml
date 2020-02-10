@@ -1,9 +1,8 @@
--  name: Checkout and build Application
+-  name: Checkout and build application
    hosts: all
    
    tasks:
-   - name: Checkout 
-     become: yes
+   - name: Checkout source code
      git:
         repo: '{{gitscheme}}://{{gituser}}:{{gitpass}}@{{giturl}}'
         dest: "{{ destdir }}"
