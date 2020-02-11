@@ -3,12 +3,25 @@
   hosts: all
  
   tasks:
- 
-  - name: Install App on WAS
-    wsadmin:
-        params: ''
-        host: ''
-        port: ''
-        username: ''
-        password: ''
-        script: "AdminApp.install('location_of_ear.ear','[-node nodeName -cell cellName -server serverName]')""
+  - name: Show ansible facts
+    debug: var=ansible_facts 
+
+  - name: Clean workspace directory
+    file:
+        path: "{{ destdir }}"
+         state: absent     
+
+  - name: Create workspace directory
+    file:
+        path: "{{ destdir }}"
+        state: directory      
+        
+  - maven_artifact:
+        group_id: com.example
+        artifact_id: demo
+        extension: war
+        username: user
+        password: RiseAndShine2020
+        repository_url: 'http://18.234.134.163/artifactory/libs-snapshot-local'
+        dest: "{{ destdir }}"        
+
