@@ -13,9 +13,13 @@
    - name: Create workspace directory
      file:
          path: "{{ destdir }}"
-         state: directory     
-
-       
+         state: directory  
+         
+   - name: Install git
+     apt:
+         name: git
+         state: present
+         update_cache: yes         
 
    - name: Checkout source code
      git:
