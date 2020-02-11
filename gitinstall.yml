@@ -1,0 +1,8 @@
+-  name: Install GIT
+   hosts: all
+   
+   tasks:
+    - name: install the latest version of GIT
+      yum:
+        name: git
+        state: present           
