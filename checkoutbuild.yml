@@ -20,7 +20,7 @@
         repo: '{{gitscheme}}://{{gituser}}:{{gitpass}}@{{giturl}}'
         dest: "{{ destdir }}"
 
-   - name: Running mvn install
+   - name: Running mvn clean install deploy
      shell: "{{ansible_local.maven.general.home}}/bin/mvn clean install"
      args:
          chdir: "{{ destdir }}"

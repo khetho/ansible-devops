@@ -1,0 +1,14 @@
+---
+- name: Hello World!
+  hosts: all
+ 
+  tasks:
+ 
+  - name: Install App on WAS
+    wsadmin:
+        params: ''
+        host: ''
+        port: ''
+        username: ''
+        password: ''
+        script: "AdminApp.install('location_of_ear.ear','[-node nodeName -cell cellName -server serverName]')""

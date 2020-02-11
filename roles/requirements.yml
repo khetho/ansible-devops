@@ -12,5 +12,5 @@
 - src: sgwilbur.ibm-installation-manager
 
 #https://galaxy.ansible.com/ansible-thoteam/nexus3-oss
-- src: ansible-thoteam.nexus3-oss
+- src: bbaassssiiee.artifactory
 

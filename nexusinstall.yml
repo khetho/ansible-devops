@@ -1,5 +1,0 @@
-- name: Install and Configure nexus
-  hosts: all
-
-  roles:
-    - role: ansible-thoteam.nexus3-oss
