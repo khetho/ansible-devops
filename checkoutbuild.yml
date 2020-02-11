@@ -21,7 +21,7 @@
         dest: "{{ destdir }}"
 
    - name: Running mvn clean install deploy
-     shell: "{{ansible_local.maven.general.home}}/bin/mvn clean install"
+     shell: "{{ansible_local.maven.general.home}}/bin/mvn clean install deploy"
      args:
          chdir: "{{ destdir }}"
      register: mvn_result        
