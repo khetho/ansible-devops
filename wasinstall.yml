@@ -3,20 +3,20 @@
   hosts: all
  
   tasks:
-  - name: Show ansible facts
-    debug: var=ansible_facts 
-
-  - name: Clean workspace directory
-    file:
-        path: "{{ destdir }}"
-         state: absent     
-
-  - name: Create workspace directory
-    file:
-        path: "{{ destdir }}"
-        state: directory      
+    - name: Show ansible facts
+      debug: var=ansible_facts 
+ 
+    - name: Clean workspace directory
+      file:
+            path: "{{ destdir }}"
+            state: absent     
+ 
+    - name: Create workspace directory
+      file:
+          path: "{{ destdir }}"
+          state: directory             
         
-  - maven_artifact:
+    - maven_artifact:
         group_id: com.example
         artifact_id: demo
         extension: war
