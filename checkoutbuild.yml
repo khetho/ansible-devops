@@ -19,3 +19,7 @@
      git:
         repo: '{{gitscheme}}://{{gituser}}:{{gitpass}}@{{giturl}}'
         dest: "{{ destdir }}"
+
+   - name: Running mvn clean
+     shell: "mvn clean install"
+     register: mvn_result        
