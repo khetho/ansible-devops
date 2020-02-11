@@ -11,6 +11,6 @@
 #https://github.com/sgwilbur/ansible-ibm-installation-manager
 - src: sgwilbur.ibm-installation-manager
 
-#https://galaxy.ansible.com/sansible/nexus
-- src: sansible.nexus
+#https://galaxy.ansible.com/ansible-thoteam/nexus3-oss
+- src: ansible-thoteam.nexus3-oss
 
