@@ -5,15 +5,17 @@
    - name: Show ansible facts
      debug: var=ansible_facts 
 
+   - name: Clean workspace directory
+     file:
+           path: "{{ destdir }}"
+           state: absent     
+
    - name: Create workspace directory
      file:
          path: "{{ destdir }}"
          state: directory     
 
-   - name: Clean workspace directory
-      file:
-            path: "{{ destdir }}/"
-            state: absent            
+       
 
    - name: Checkout source code
      git:
